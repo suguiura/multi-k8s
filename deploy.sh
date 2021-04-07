@@ -1,3 +1,7 @@
+#!/usr/bin/env
+
+set -euo pipefail
+
 docker build -t suguiura/multi-client:latest -t suguiura/multi-client:${SHA} -f ./client/Dockerfile ./client
 docker build -t suguiura/multi-server:latest -t suguiura/multi-server:${SHA} -f ./server/Dockerfile ./server
 docker build -t suguiura/multi-worker:latest -t suguiura/multi-worker:${SHA} -f ./worker/Dockerfile ./worker
